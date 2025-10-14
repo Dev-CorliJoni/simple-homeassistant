@@ -1,0 +1,49 @@
+[project]
+name = "simple-homeassistant"
+description = "Framework for building easy Home Assistant devices"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Dev-CorliJoni" }]
+keywords = ["mqtt", "iot", "homeassistant", "ha", "smarthome", "smart"]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Topic :: Internet",
+  "Topic :: Home Automation",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+dynamic = ["version","dependencies"]
+
+[project.urls]
+GitHub = "https://github.com/Dev-CorliJoni/simple-homeassistant"
+Source   = "https://github.com/Dev-CorliJoni/simple-homeassistant"
+Issues   = "https://github.com/Dev-CorliJoni/simple-homeassistant/issues"
+Instagram  = "https://www.instagram.com/dev.corlijoni/"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["homeassistant*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+homeassistant = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "homeassistant.__version__" }
+dependencies = { file = "requirements.txt" }
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

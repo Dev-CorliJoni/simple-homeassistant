@@ -1,0 +1,17 @@
+# Ignore custom files/directories
+.jh*
+.DS_Store
+.git/
+
+dist
+tests/docker/mosquitto
+
+simple_homeassistant.egg-info
+venv
+.idea
+.venv
+.direnv
+.envrc
+.env
+
+*/__pycache__
