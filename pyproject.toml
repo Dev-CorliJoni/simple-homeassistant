@@ -12,6 +12,7 @@ classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only", "Typing :: Typed",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
@@ -34,14 +35,14 @@ Instagram  = "https://www.instagram.com/dev.corlijoni/"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["homeassistant*"]
+include = ["simplehomeassistant*"]
 exclude = ["tests*"]
 
 [tool.setuptools.package-data]
-homeassistant = ["py.typed"]
+simplehomeassistant = ["py.typed"]
 
 [tool.setuptools.dynamic]
-version = { attr = "homeassistant.__version__" }
+version = { attr = "simplehomeassistant.__version__" }
 dependencies = { file = "requirements.txt" }
 
 [build-system]
